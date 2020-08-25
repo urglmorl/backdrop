@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Backdrop(
       slideSensitivity: 0.5,
-      sliderHeight: 200,
+      sliderHeight: 75,
       backLayer: Container(
         color: Colors.indigo,
         child: Column(
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(),
             ),
             Container(
-                height: 200,
+                height: 75,
                 child: ListView.builder(
                   itemBuilder: (context, index) {
                     return Padding(
