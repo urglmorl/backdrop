@@ -17,7 +17,10 @@ class _RecepientRowState extends State<RecepientRow> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(Icons.keyboard_arrow_left),
+          Icon(
+            Icons.keyboard_arrow_left,
+            color: Colors.black45,
+          ),
           Padding(
             padding: EdgeInsets.only(left: 10, right: 20),
             child: CircleAvatar(
@@ -41,7 +44,19 @@ class _RecepientRowState extends State<RecepientRow> {
               ],
             ),
           ),
-          Icon(Icons.menu)
+          GestureDetector(
+            onTap: () {
+              print('menu tapped');
+            },
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              child: Image.asset(
+                'assets/images/ic_ab_other.png',
+                color: Colors.black45,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
         ],
       ),
     );

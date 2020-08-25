@@ -1,6 +1,6 @@
-import 'package:backdrop/widgets/back_layer_widget.dart';
-import 'package:backdrop/widgets/backdrop_widget.dart';
-import 'package:backdrop/widgets/front_layer_widget.dart';
+import 'package:backdrop/widgets/backdrop/back_layer_widget.dart';
+import 'package:backdrop/widgets/backdrop/backdrop_widget.dart';
+import 'package:backdrop/widgets/backdrop/front_layer_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -48,11 +48,11 @@ class _FrontLayerWidgetState extends State<FrontLayerWidget> {
             ),
           ),
           Container(
-            height: 75,
+            height: 60,
             child: RecepientRow(),
           ),
           Container(
-            height: 75,
+            height: 55,
             color: Colors.blue,
             child: MessageRow(),
           ),
