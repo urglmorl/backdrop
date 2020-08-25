@@ -6,7 +6,7 @@ enum MessageType {
 class Message {
   int id;
   String text;
-  MessageType type;
+  final MessageType type;
 
   Message({this.id, this.text, this.type});
 }

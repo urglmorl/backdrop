@@ -22,6 +22,7 @@ class _RecepientRowState extends State<RecepientRow> {
             padding: EdgeInsets.only(left: 10, right: 20),
             child: CircleAvatar(
               radius: 20,
+              child: Icon(Icons.person),
             ),
           ),
           Expanded(

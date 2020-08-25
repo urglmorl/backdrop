@@ -7,6 +7,30 @@ class SentMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      width: double.infinity,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.blue[200],
+              borderRadius: BorderRadius.all(
+                Radius.circular(5),
+              ),
+            ),
+            margin: EdgeInsets.only(right: 5),
+            padding: EdgeInsets.all(10),
+            child: Text(
+              message.text,
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

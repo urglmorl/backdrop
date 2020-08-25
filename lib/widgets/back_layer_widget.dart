@@ -20,19 +20,21 @@ class _BackLayerWidgetState extends State<BackLayerWidget> {
             child: Container(),
           ),
           Container(
-              height: 75,
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.all(10),
-                    child: CircleAvatar(
-                      radius: 20,
-                    ),
-                  );
-                },
-                itemCount: widget.data.length,
-                scrollDirection: Axis.horizontal,
-              ))
+            height: 75,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.all(10),
+                  child: CircleAvatar(
+                    radius: 20,
+                    child: Icon(Icons.person),
+                  ),
+                );
+              },
+              itemCount: widget.data.length,
+              scrollDirection: Axis.horizontal,
+            ),
+          ),
         ],
       ),
     );

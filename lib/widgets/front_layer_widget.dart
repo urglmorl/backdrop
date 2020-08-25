@@ -1,3 +1,6 @@
+import 'package:backdrop/models/message.dart';
+import 'package:backdrop/widgets/message_widgets/received_message_widget.dart';
+import 'package:backdrop/widgets/message_widgets/sent_message_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:backdrop/widgets/message_row.dart';
 import 'package:backdrop/widgets/recepient_row.dart';
@@ -19,21 +22,29 @@ class _FrontLayerWidgetState extends State<FrontLayerWidget> {
       child: Column(
         children: [
           Expanded(
-            child: Container(
-              child: ListView.separated(
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text('${widget.data[index]}'),
-                  );
-                },
-                separatorBuilder: (context, int) {
-                  return Container(
-                    height: 5,
-                    width: double.infinity,
-                  );
-                },
-                itemCount: widget.data.length,
-              ),
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return index % 2 == 0
+                    ? ReceivedMessageWidget(
+                        message: ReceivedMessage(
+                          id: index,
+                          text: 'text',
+                        ),
+                      )
+                    : SentMessageWidget(
+                        message: SentMessage(
+                          id: index,
+                          text: 'text',
+                        ),
+                      );
+              },
+              separatorBuilder: (context, int) {
+                return Container(
+                  height: 2,
+                  width: double.infinity,
+                );
+              },
+              itemCount: widget.data.length,
             ),
           ),
           Container(
