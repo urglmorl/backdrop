@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class BackLayerWidget extends StatefulWidget {
   final List<int> data;
-  BackLayerWidget({Key key, this.data}) : super(key: key);
+  final double height;
+  BackLayerWidget({Key key, this.data, this.height}) : super(key: key);
 
   @override
   _BackLayerWidgetState createState() => _BackLayerWidgetState();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:backdrop/message_row.dart';
-import 'package:backdrop/recepient_row.dart';
+import 'package:backdrop/widgets/message_row.dart';
+import 'package:backdrop/widgets/recepient_row.dart';
 
 class FrontLayerWidget extends StatefulWidget {
   final List<int> data;
@@ -20,7 +20,6 @@ class _FrontLayerWidgetState extends State<FrontLayerWidget> {
         children: [
           Expanded(
             child: Container(
-              color: Colors.black54,
               child: ListView.separated(
                 itemBuilder: (context, index) {
                   return ListTile(
@@ -28,7 +27,10 @@ class _FrontLayerWidgetState extends State<FrontLayerWidget> {
                   );
                 },
                 separatorBuilder: (context, int) {
-                  return Divider();
+                  return Container(
+                    height: 5,
+                    width: double.infinity,
+                  );
                 },
                 itemCount: widget.data.length,
               ),

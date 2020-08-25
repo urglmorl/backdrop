@@ -1,6 +1,6 @@
-import 'package:backdrop/back_layer_widget.dart';
-import 'package:backdrop/backdrop_widget.dart';
-import 'package:backdrop/front_layer_widget.dart';
+import 'package:backdrop/widgets/back_layer_widget.dart';
+import 'package:backdrop/widgets/backdrop_widget.dart';
+import 'package:backdrop/widgets/front_layer_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,15 +27,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final fakeData = List.generate(50, (index) => index);
+  final _fakeData = List.generate(50, (index) => index);
+  final double _sliderHeight = 75;
 
   @override
   Widget build(BuildContext context) {
     return Backdrop(
-      slideSensitivity: 0.5,
-      sliderHeight: 75,
-      backLayer: BackLayerWidget(data: fakeData),
-      frontLayer: FrontLayerWidget(data: fakeData),
+      slideSensitivity: 2,
+      sliderHeight: _sliderHeight,
+      backLayer: BackLayerWidget(data: _fakeData, height: _sliderHeight),
+      frontLayer: FrontLayerWidget(data: _fakeData),
     );
   }
 }
